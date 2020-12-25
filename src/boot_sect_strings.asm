@@ -14,7 +14,12 @@ call print_string   ;   so we can specify the address of a string
 mov bx, GOODBYE_MSG
 call print_string
 
+mov dx, 0x1fb6
+call print_hex
+
 jmp $
+
+%include "print_hex.asm"
 
 %include "print_string.asm"
 
